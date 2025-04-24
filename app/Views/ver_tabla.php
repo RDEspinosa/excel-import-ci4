@@ -19,7 +19,8 @@
     <div class="table-container">
         <div class="input-field">
             <i class="material-icons prefix">search</i>
-            <input type="text" id="buscador" placeholder="Buscar en la tabla...">
+            <input type="text" id="buscador">
+            <label for="buscador">Buscar en la tabla...</label>
         </div>
 
         <table class="striped highlight responsive-table">

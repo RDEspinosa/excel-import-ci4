@@ -68,7 +68,7 @@
         <div class="card orange lighten-1 white-text">
             <div class="card-content">
                 <span class="card-title">Último Archivo</span>
-                <h5><?= esc($ultimoArchivo ?? 'N/A') ?></h5>
+                <p><?= esc($ultimoArchivo ?? 'N/A') ?></p>
             </div>
         </div>
     </div>
