@@ -1,77 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <title><?= lang('Errors.pageNotFound') ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
-        div.logo {
-            height: 200px;
-            width: 155px;
-            display: inline-block;
-            opacity: 0.08;
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            margin-left: -73px;
-        }
         body {
-            height: 100%;
-            background: #fafafa;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #777;
-            font-weight: 300;
-        }
-        h1 {
-            font-weight: lighter;
-            letter-spacing: normal;
-            font-size: 3rem;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: #222;
-        }
-        .wrap {
-            max-width: 1024px;
-            margin: 5rem auto;
-            padding: 2rem;
-            background: #fff;
+            background: #f44336;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
             text-align: center;
-            border: 1px solid #efefef;
-            border-radius: 0.5rem;
-            position: relative;
+            flex-direction: column;
+            padding: 20px;
         }
-        pre {
-            white-space: normal;
-            margin-top: 1.5rem;
+
+        .icon-404 {
+            font-size: 6rem;
         }
-        code {
-            background: #fafafa;
-            border: 1px solid #efefef;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            display: block;
+
+        .search-box {
+            max-width: 500px;
+            margin: 30px auto;
         }
-        p {
-            margin-top: 1.5rem;
-        }
-        .footer {
-            margin-top: 2rem;
-            border-top: 1px solid #efefef;
-            padding: 1em 2em 0 2em;
-            font-size: 85%;
-            color: #999;
-        }
-        a:active,
-        a:link,
-        a:visited {
-            color: #dd4814;
+
+        .btn-flat.white-text:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>404</h1>
 
+    <div>
+        <i class="material-icons icon-404">error_outline</i>
+        <h3>404 - Página no encontrada</h3>
+        <p>Lo sentimos, la ruta que intentaste visitar no existe.</p>
+
+        <div class="search-box">
+            <form method="get" action="<?= base_url('dashboard') ?>">
+                <div class="input-field white-text">
+                    <input id="buscar" type="text" name="busqueda" class="white-text" placeholder="Buscar en el sistema...">
+                    <label for="buscar" class="active white-text">🔎 Búsqueda rápida</label>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <a href="<?= base_url('/') ?>" class="btn white red-text text-darken-4">🏠 Inicio</a>
+            <a href="<?= base_url('/dashboard') ?>" class="btn-flat white-text">📊 Ir al Dashboard</a>
+        </div>
+    </div>
+
+    <div class="wrap">
         <p>
             <?php if (ENVIRONMENT !== 'production') : ?>
                 <?= nl2br(esc($message)) ?>
@@ -80,5 +68,8 @@
             <?php endif; ?>
         </p>
     </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
