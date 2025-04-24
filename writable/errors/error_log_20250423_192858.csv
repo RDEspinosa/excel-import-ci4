@@ -1,0 +1,5 @@
+Tabla,Error
+clientes,"Fila 3: Email inválido."
+producto,"Fila 1: Precio debe ser numérico."
+producto,"Fila 4: Precio debe ser numérico."
+ventas,"Fila 2: Fecha debe tener el formato YYYY-MM-DD."

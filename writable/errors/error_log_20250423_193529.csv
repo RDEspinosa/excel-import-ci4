@@ -1,0 +1,7 @@
+Tabla,Error
+clientes,"Fila 1: Campo 'nombre' vacío."
+clientes,"Fila 2: Campo 'nombre' vacío."
+clientes,"Fila 3: Campo 'nombre' vacío."
+clientes,"Fila 4: Campo 'nombre' vacío."
+ventas,"Fila 1: Producto ID no existe: 10, Cliente ID no existe: 10"
+ventas,"Fila 2: Fecha debe tener el formato YYYY-MM-DD."

@@ -1,0 +1,6 @@
+Tabla,Error
+clientes,"Fila 2: Campo 'nombre' vacío."
+clientes,"Fila 3: Campo 'nombre' vacío."
+clientes,"Fila 4: Campo 'nombre' vacío."
+ventas,"Fila 1: Campo 'producto_id' vacío."
+ventas,"Fila 2: Campo 'producto_id' vacío."
