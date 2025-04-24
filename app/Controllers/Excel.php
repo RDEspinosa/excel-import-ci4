@@ -183,6 +183,7 @@ class Excel extends BaseController
             }
         } */
         //return view('import_result', ['resumen' => $resumen]);
+
         // Guardar errores en CSV
         $errorLines = [];
         foreach ($resumen as $tabla => $resultado) {
@@ -206,6 +207,7 @@ class Excel extends BaseController
 
             $errorFile = base_url("errors/{$errorFileName}");
         }
+        
         // Guardar en la base de datos el historial de importación
         $tablasProcesadas = array_keys($resumen);
         $registrosInsertados = 0;
